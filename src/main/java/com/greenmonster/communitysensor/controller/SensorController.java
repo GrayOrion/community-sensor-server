@@ -36,9 +36,7 @@ public class SensorController {
     @PostMapping("")
     public void create(@Valid @RequestBody Sensor sensor) {
         repository.save(sensor);
+
     }
-
-    
-
 
 }
