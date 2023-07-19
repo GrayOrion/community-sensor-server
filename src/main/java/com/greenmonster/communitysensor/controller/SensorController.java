@@ -2,6 +2,8 @@ package com.greenmonster.communitysensor.controller;
 
 import com.greenmonster.communitysensor.model.Sensor;
 import com.greenmonster.communitysensor.repository.SensorCollectionRepository;
+import com.greenmonster.communitysensor.repository.SensorJdbcTemplateRepository;
+import com.greenmonster.communitysensor.repository.SensorRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,10 +16,12 @@ import java.util.List;
 @RequestMapping("/api/sensor")
 public class SensorController {
 
-    private final SensorCollectionRepository repository;
+    private final SensorRepository repository;
+   // private final SensorCollectionRepository repository;
+   // private final SensorJdbcTemplateRepository repository;
 
     @Autowired // not needed when only one constructor
-    public SensorController(SensorCollectionRepository repository) {
+    public SensorController(SensorRepository repository) {
         this.repository = repository;
     }
 
@@ -52,6 +56,7 @@ public class SensorController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
-        repository.delete(id);
+
+        repository.deleteById(id);
     }
 }
