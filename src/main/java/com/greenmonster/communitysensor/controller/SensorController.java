@@ -16,7 +16,7 @@ public class SensorController {
 
     private final SensorCollectionRepository repository;
 
-    @Autowired
+    @Autowired // not needed when only one constructor
     public SensorController(SensorCollectionRepository repository) {
         this.repository = repository;
     }
@@ -39,6 +39,19 @@ public class SensorController {
 
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{id}")
+    public void update(@RequestBody Sensor sensor, @PathVariable Integer id) {
+        if(!repository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Sensor not found");
+        }
 
+        repository.save(sensor);
+    }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id) {
+        repository.delete(id);
+    }
 }

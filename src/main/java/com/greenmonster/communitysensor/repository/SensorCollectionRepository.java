@@ -40,5 +40,13 @@ public class SensorCollectionRepository {
         sensorList.add(sensor);
     }
 
+    public boolean existsById(Integer id) {
+        return sensorList.stream().anyMatch(c -> c.id().equals(id));
+    }
+
+    public void delete(Integer id)
+    {
+        sensorList.removeIf(c -> c.id().equals(id));
+    }
 
 }
