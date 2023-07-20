@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS Sensor (
     PRIMARY KEY (id)
 );
 
-INSERT INTO Sensor(name, desc, location_description, type, status, sensor_class)
-VALUES ('My Sensor', 'A sensor', 'My House', 'THERMOMETER', 'TESTING', 'AMATEUR');
+-- INSERT INTO Sensor(name, desc, location_description, type, status, sensor_class)
+-- VALUES ('My Sensor', 'A sensor', 'My House', 'THERMOMETER', 'TESTING', 'AMATEUR');
