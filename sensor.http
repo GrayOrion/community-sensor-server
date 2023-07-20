@@ -5,6 +5,7 @@ GET http://localhost:8080/api/sensor
 ### get Sensor by ID
 GET http://localhost:8080/api/sensor/1
 
+
 ### Create new Sensor
 POST http://localhost:8080/api/sensor
 Content-Type: application/json
@@ -20,7 +21,7 @@ Content-Type: application/json
 }
 
 
-### Update Content
+### Update Sensor
 PUT http://localhost:8080/api/sensor/2
 Content-Type: application/json
 
@@ -30,12 +31,22 @@ Content-Type: application/json
   "desc": "A sensor that does SOMETHING",
   "locationDescription": "My House, 2nd floor",
   "type": "THERMOMETER",
-  "status": "TESTING",
+  "status": "PRODUCTION",
   "sensorClass": "AMATEUR"
 }
 
 
-### Update non existing content
+### Find Sensor by Type
+GET http://localhost:8080/api/sensor/type/THERMOMETER
+
+### Find Sensor by Status
+GET http://localhost:8080/api/sensor/status/TESTING
+
+### Find Sensor by Status
+GET http://localhost:8080/api/sensor/status/PRODUCTION
+
+
+### Update non existing sensor
 PUT http://localhost:8080/api/sensor/99
 Content-Type: application/json
 
@@ -50,5 +61,6 @@ Content-Type: application/json
 }
 
 
-### Delete content by ID
+### Delete Sensor by ID
 DELETE http://localhost:8080/api/sensor/1
+

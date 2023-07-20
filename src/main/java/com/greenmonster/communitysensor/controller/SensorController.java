@@ -1,6 +1,8 @@
 package com.greenmonster.communitysensor.controller;
 
 import com.greenmonster.communitysensor.model.Sensor;
+import com.greenmonster.communitysensor.model.Status;
+import com.greenmonster.communitysensor.model.Type;
 import com.greenmonster.communitysensor.repository.SensorCollectionRepository;
 import com.greenmonster.communitysensor.repository.SensorJdbcTemplateRepository;
 import com.greenmonster.communitysensor.repository.SensorRepository;
@@ -58,5 +60,15 @@ public class SensorController {
     public void delete(@PathVariable Integer id) {
 
         repository.deleteById(id);
+    }
+
+    @GetMapping("/type/{type}")
+    public List<Sensor> findByType(@PathVariable Type type) {
+        return repository.findAllByTypeIs(type);
+    }
+
+    @GetMapping("/status/{status}")
+    public List<Sensor> findByStatus(@PathVariable Status status) {
+        return repository.listByStatus(status);
     }
 }
