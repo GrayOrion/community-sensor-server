@@ -1,7 +1,7 @@
 package com.greenmonster.communitysensor.model;
 
 public enum SensorClass {
-    AMATURE,
+    AMATEUR,
     PROFESSIONAL,
     RESEARCH,
     GOVERNMENT

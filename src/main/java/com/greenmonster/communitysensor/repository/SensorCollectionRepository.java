@@ -31,7 +31,7 @@ public class SensorCollectionRepository {
     @PostConstruct
     private void init(){
         Sensor sensor = new Sensor(1, "Temp Sensor 01", "Temp sensor by greenhouse door",
-                "Greenhouse", Type.THERMOMETER, Status.TESTING, SensorClass.AMATURE);
+                "Greenhouse", Type.THERMOMETER, Status.TESTING, SensorClass.AMATEUR);
         sensorList.add(sensor);
     }
 
