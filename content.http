@@ -1,12 +1,12 @@
 ### Find All content
-GET http://localhost:8080/api/content
+GET http://localhost:8080/api/sensor/1
 
 
 ### get content by ID
 GET http://localhost:8080/api/content/1
 
 ### Create new Content
-POST http://localhost:8080/api/content
+POST http://localhost:8080/api/sensor
 Content-Type: application/json
 
 {
