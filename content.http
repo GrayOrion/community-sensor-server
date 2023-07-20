@@ -1,23 +1,22 @@
-### Find All content
+### Find All Sensors
+GET http://localhost:8080/api/sensor
+
+
+### get Sensor by ID
 GET http://localhost:8080/api/sensor/1
 
-
-### get content by ID
-GET http://localhost:8080/api/content/1
-
-### Create new Content
+### Create new Sensor
 POST http://localhost:8080/api/sensor
 Content-Type: application/json
 
 {
   "id": 2,
-  "title": "My Second Blog Post",
-  "desc": "My Second blog post",
-  "status": "IDEA",
-  "contentType": "ARTICLE",
-  "dateCreated": "2023-06-27T20:46:27.610831",
-  "dateUpdated": null,
-  "url": ""
+  "name": "My 2nd sensor",
+  "desc": "A sensor that does nothing",
+  "locationDescription": "My House, 2nd floor",
+  "type": "THERMOMETER",
+  "status": "TESTING",
+  "sensorClass": "AMATEUR"
 }
 
 
