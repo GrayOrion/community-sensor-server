@@ -1,0 +1,54 @@
+### Find All Sensors
+GET http://localhost:8080/api/sensor
+
+
+### get Sensor by ID
+GET http://localhost:8080/api/sensor/1
+
+### Create new Sensor
+POST http://localhost:8080/api/sensor
+Content-Type: application/json
+
+{
+  "id": null,
+  "name": "My 2nd sensor",
+  "desc": "A sensor that does nothing",
+  "locationDescription": "My House, 2nd floor",
+  "type": "THERMOMETER",
+  "status": "TESTING",
+  "sensorClass": "AMATEUR"
+}
+
+
+### Update Content
+PUT http://localhost:8080/api/sensor/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "My 2nd sensor",
+  "desc": "A sensor that does SOMETHING",
+  "locationDescription": "My House, 2nd floor",
+  "type": "THERMOMETER",
+  "status": "TESTING",
+  "sensorClass": "AMATEUR"
+}
+
+
+### Update non existing content
+PUT http://localhost:8080/api/sensor/99
+Content-Type: application/json
+
+{
+  "id": 99,
+  "name": "My 2nd sensor",
+  "desc": "A sensor that does nothing",
+  "locationDescription": "My House, 2nd floor",
+  "type": "THERMOMETER",
+  "status": "TESTING",
+  "sensorClass": "AMATEUR"
+}
+
+
+### Delete content by ID
+DELETE http://localhost:8080/api/sensor/1
