@@ -6,7 +6,6 @@ import com.greenmonster.communitysensor.model.Status;
 import com.greenmonster.communitysensor.model.Type;
 import com.greenmonster.communitysensor.repository.SensorRepository;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -19,6 +18,7 @@ public class Application {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 		RestTemplate restTemplate = (RestTemplate)context.getBean("restTemplate");
+
 	}
 
 
