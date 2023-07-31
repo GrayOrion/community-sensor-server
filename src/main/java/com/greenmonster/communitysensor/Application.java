@@ -1,5 +1,6 @@
 package com.greenmonster.communitysensor;
 
+import com.greenmonster.communitysensor.config.CommunitySensorProperties;
 import com.greenmonster.communitysensor.model.Sensor;
 import com.greenmonster.communitysensor.model.SensorClass;
 import com.greenmonster.communitysensor.model.Status;
@@ -8,10 +9,12 @@ import com.greenmonster.communitysensor.repository.SensorRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+@EnableConfigurationProperties(CommunitySensorProperties.class)
 @SpringBootApplication
 public class Application {
 
