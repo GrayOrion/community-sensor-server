@@ -29,3 +29,7 @@ These different data storage methods are controlled through configuration profil
 * [ ] add a sensor management system
 * [ ] add a mapping system for sensors
 * [ ] add a data visualization system
+
+## Spring Boot Components/Frameworks
+
+Spring Boot Actuator - production ready endpionts such as metrics, monitoring, and audit
