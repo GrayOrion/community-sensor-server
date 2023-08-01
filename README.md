@@ -5,10 +5,12 @@ Data will flow to this repository from sensor platforms through a pub/sub system
 In the future, we will also have a web interface for data visualization and management.
 
 ## Data Storage and Handling
-So far we created 2 ways of managing our data:
+So far we created 3 ways of managing our data:
 1. In memory, Collection repository (List<Sensor> practically) for initial prototyping
 2. JDBC repository for light abstraction of data management (using dockerized postgres or H2 in memory DB)
 3. Spring Data JPA repository for full abstraction of data management (we will test dockerized postgres, but many RDBMS are supported)
+
+These different data storage methods are controlled through configuration profiles
 
 ## Roadmap
 * [x] Create a basic Spring Boot project
@@ -18,6 +20,8 @@ So far we created 2 ways of managing our data:
 * [x] Create a basic Dockerfile
 * [x] Create a basic JDBC repository
 * [x] Create a basic Spring Data JPA repository
+* [X] Create profiles to be able to differentiate dev/testing/production configurations
+* [ ] Add containerized deployment configuration
 * [ ] Collect data from sub/pub system
 * [ ] Create a basic web interface
 * [ ] Deploy minimal system in cloud
