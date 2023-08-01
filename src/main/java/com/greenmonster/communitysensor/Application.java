@@ -25,6 +25,9 @@ public class Application {
 	}
 
 
+	/**
+	 * an example of how you can insert data into the database through a bean that will be loaded automatically
+	 *
 	@Bean
 	CommandLineRunner commandLineRunner(SensorRepository sensorRepository) {
 		return args -> {
@@ -35,5 +38,5 @@ public class Application {
 
 		};
 
-	}
+	} */
 }

@@ -1,0 +1,47 @@
+[
+  {
+    "id":null,
+    "name":"My Sensor",
+    "desc":"A sensor",
+    "locationDescription":"My House",
+    "type":"THERMOMETER",
+    "status":"TESTING",
+    "sensorClass":"AMATEUR"
+  },
+  {
+    "id":null,
+    "name":"New Sensor",
+    "desc":"Temp sensor greenhouse",
+    "locationDescription":"Greenhouse",
+    "type":"THERMOMETER",
+    "status":"TESTING",
+    "sensorClass":"AMATEUR"
+  },
+  {
+    "id":null,
+    "name":"My 3rd sensor",
+    "desc":"A sensor that does nothing",
+    "locationDescription":"My House, 2nd floor",
+    "type":"THERMOMETER",
+    "status":"TESTING",
+    "sensorClass":"AMATEUR"
+  },
+  {
+    "id":null,
+    "name":"My 4th sensor",
+    "desc":"A sensor that does SOMETHING",
+    "locationDescription":"My House, 2nd floor",
+    "type":"THERMOMETER",
+    "status":"PRODUCTION",
+    "sensorClass":"AMATEUR"
+  },
+  {
+    "id":null,
+    "name":"My 5th sensor",
+    "desc":"A sensor that does nothing for real",
+    "locationDescription":"My House, 2nd floor",
+    "type":"THERMOMETER",
+    "status":"TESTING",
+    "sensorClass":"AMATEUR"
+  }
+]
