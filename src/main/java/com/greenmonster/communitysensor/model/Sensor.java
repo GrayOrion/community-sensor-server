@@ -14,6 +14,7 @@ public record Sensor(
         @NotBlank
         String name,
         @NotBlank
+        @Column(value = "description")
         String desc,
         String locationDescription,
         @NotNull //was @NotBlank - TODO: how do I define not blank here?!?
