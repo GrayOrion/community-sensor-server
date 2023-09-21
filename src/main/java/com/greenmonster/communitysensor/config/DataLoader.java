@@ -27,10 +27,13 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("running data loader");
-        try(InputStream inputStream = TypeReference.class.getResourceAsStream("/data/content.json")) {
-            sensorRepository.saveAll(objectMapper.readValue(inputStream, new TypeReference<List<Sensor>>(){}));
+        if (sensorRepository.count() == 0)
+        {
+            try(InputStream inputStream = TypeReference.class.getResourceAsStream("/data/content.json")) {
+                sensorRepository.saveAll(objectMapper.readValue(inputStream, new TypeReference<List<Sensor>>() {
+                }));
+            }
         }
-
     }
 
 
